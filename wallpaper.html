@@ -2,11 +2,14 @@
 const params = new URLSearchParams(window.location.search);
 
 const id = params.get("id");
+const image = params.get("image");
 
-window.location.href = `artlyx://wallpaper/${id}`;
+// Open your app
+window.location.href =
+  `artlyx://wallpaper?id=${encodeURIComponent(id)}&image=${encodeURIComponent(image)}`;
 
 setTimeout(() => {
-    window.location.href =
-        "https://play.google.com/store/apps/details?id=com.paninix.artlyx";
+  window.location.href =
+    "https://play.google.com/store/apps/details?id=com.paninix.artlyx";
 }, 1500);
 </script>
